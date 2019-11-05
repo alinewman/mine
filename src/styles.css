@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* ::ng-deep .ui-table td tr{
+    background-color: pink;
+} */
+/* 
+::ng-deep body .ui-table .ui-table-tbody > tr > td {
+     background-color: inherit; 
+    border: 1px!important;
+} */

@@ -1,0 +1,260 @@
+{
+    "data": [
+        {
+            "id": "payments",
+            "name": "Payments",
+            "globalRights": "noRights",
+            "treeId": "paymentId",
+            "grantRight": false,
+            "checkable": true,
+            "registers": [
+                "Manage Security Levels for Payments"
+            ],
+            "rights": [
+                {
+                    "id": "payments_auditlogview",
+                    "name": "Audit Log - View",
+                    "checked": false
+                },
+                {
+                    "id": "payments_approvalgroupview",
+                    "name": "Approval Group - View",
+                    "checked": false,
+                    "rights": [
+                        {
+                            "id": "payments_approvalgroupview_create",
+                            "name": "Create",
+                            "checked": false
+                        },
+                        {
+                            "id": "payments_approvalgroupview_update",
+                            "name": "Update",
+                            "checked": false
+                        },
+                        {
+                            "id": "payments_approvalgroupview_delete",
+                            "name": "Delete",
+                            "checked": false
+                        
+                        },
+                        {
+                            "id": "payments_approvalgroupview_approve",
+                            "name": "Approve",
+                            "checked": false
+                        }
+                    ]
+                },
+                {
+                    "id": "payments_approvalprofileview",
+                    "name": "Approval Profile - View",
+                    "checked": false,
+                    "rights": [
+                        {
+                            "id": "payments_approvalprofileview_create",
+                            "name": "Create",
+                            "checked": false
+                        },
+                        {
+                            "id": "payments_approvalprofileview_update",
+                            "name": "Update",
+                            "checked": false
+                        },
+                        {
+                            "id": "payments_approvalprofileview_delete",
+                            "name": "Delete",
+                            "checked": false
+                        },
+                        {
+                            "id": "payments_approvalprofileview_approve",
+                            "name": "Approve",
+                            "checked": false
+                        }
+                    ]
+                },
+                {
+                    "id": "payments_importfiles_view",
+                    "name": "Import Files - View",
+                    "checked": false
+                },
+                {
+                    "id": "payments_importfilesmanageprofile",
+                    "name": "Import Files - Manage Profile",
+                    "checked": false,
+                    "rights": [
+                        {
+                            "id": "payments_importfilesmanageprofile_approve",
+                            "name": "Approve",
+                            "checked": false
+                        }
+                    ]
+                },
+                {
+                    "id": "payments_managesecurereceiver",
+                    "name": "Manage Secure Receiver",
+                    "checked": false
+                },
+                {
+                    "id": "payments_unmanagedreceivers",
+                    "name": "Unmanaged Receivers",
+                    "checked": false,
+                    "rights": [
+                        {
+                            "id": "payments_unmanagedreceivers_createupdate",
+                            "name": "Create/Update",
+                            "checked": false
+                        },
+                        {
+                            "id": "payments_unmanagedreceivers_managesecurereceiver",
+                            "name": "Manage Secure Receiver",
+                            "checked": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "wire",
+            "name": "Wire Services",
+            "globalRights": "noRights",
+            "treeId": "wireId",
+            "grantRight": false,
+            "checkable": true,
+            "registers": [
+                "Manage Attributes for Wire Services",
+                "Manage Domestic Bank Accounts - Commercial for Wire Services",
+                "Manage Security Levels for Wire Services",
+                "Manage Domestic Bank Accounts - Commercial (Savings) for Wire Services",
+                "Manage Global Treasury Management Accounts for Wire Services"
+            ],
+            "rights": [
+                {
+                    "id": "wire_wiremanagedreceiversview",
+                    "name": "Wire Managed Receivers - View",
+                    "checked": false,
+                    "rights": [
+                        {
+                            "id": "wire_wiremanagedreceiversview_createupdate",
+                            "name": "Create/Update",
+                            "checked": false
+                        },
+                        {
+                            "id": "wire_wiremanagedreceiversview_delete",
+                            "name": "Delete",
+                            "checked": false
+                        },
+                        {
+                            "id": "payments_approvalgroupview_approve",
+                            "name": "Approve",
+                            "checked": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "domesticwire",
+            "name": "Domestic Wire Services",
+            "globalRights": "noRights",
+            "treeId": "domesticId",
+            "grantRight": false,
+            "checkable": true,
+            "registers": [
+                "Manage Domestic Bank Accounts - Commercial for Domestic Wire",
+                "Manage Security Levels for Domestic Wire",
+                "Manage Domestic Bank Accounts - Commercial (Savings) for Domestic Wire"
+            ],
+            "rights": [
+                {
+                    "id": "domesticwire_viewpaymentdetails",
+                    "name": "View Payment Details",
+                    "rights": [
+                        {
+                            "id": "domesticwire_viewpaymentdetails_createupdatepayment",
+                            "name": "Create/Update Payment",
+                            "checked": false,
+                            "registers": [
+                                "Manage Attributes for Create/Update Payment"
+                            ],
+                            "rights": [
+                                {
+                                    "id": "createupdatepayment_paymentfromtemplate",
+                                    "name": "Create/Update Payment from Template",
+                                    "checked": false
+                                },
+                                {
+                                    "id": "createupdatepayment_freeformtemplate",
+                                    "name": "Create/Update Freeform Payment",
+                                    "checked": false
+                                }
+                            ]
+                        },
+                        {
+                            "id": "domesticwire_viewpaymentdetails_importpayment",
+                            "name": "Import Payment"
+                        },
+                        {
+                            "id": "domesticwire_viewpaymentdetails_approvepayment",
+                            "name": "Approve Payment",
+                            "registers": [
+                                "Manage Attributes for Approve Payment"
+                            ]
+                        },
+                        {
+                            "id": "domesticwire_viewpaymentdetails_cancelpayment",
+                            "name": "Cancel Payment",
+                            "checked": false
+                        },
+                        {
+                            "id": "domesticwire_viewpaymentdetails_cancelpayment",
+                            "name": "Cancel Payment",
+                            "checked": false
+                        }
+                    ]
+                },
+                {
+                    "id": "domesticwire_viewtemplatedetails",
+                    "name": "View Template Details",
+                    "rights": [
+                        {
+                            "id": "domesticwire_viewtemplatedetails_createtemplate",
+                            "name": "Create Template",
+                            "checked": false
+                        },
+                        {
+                            "id": "domesticwire_viewtemplatedetails_edittemplate",
+                            "name": "Edit Template",
+                            "checked": false,
+                            "rights": [
+                                {
+                                    "id": "edittemplate_edittemplatelimit",
+                                    "name": "Edit Template Limit",
+                                    "checked": false
+                                }
+                            ]
+                        },
+                        {
+                            "id": "domesticwire_viewtemplatedetails_importtemplate",
+                            "name": "Import Template",
+                            "checked": false
+                        },
+                        {
+                            "id": "domesticwire_viewtemplatedetails_approvetemplate",
+                            "name": "Approve Template",
+                            "checked": false
+                        },
+                        {
+                            "id": "domesticwire_viewtemplatedetails_deletetemplate",
+                            "name": "Delete Template",
+                            "checked": false
+                        }
+                    ]
+                },
+                {
+                    "id": "domesticwire_viewreport",
+                    "name": "View Report",
+                    "checked": false
+                }
+            ]
+        }
+    ]
+}

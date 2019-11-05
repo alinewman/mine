@@ -1,0 +1,91 @@
+<p-table *ngIf="registers" [value]="registers" id="rightsTable">
+
+    <ng-template pTemplate="body" let-rowData let-columns="columns" let-expanded="expanded">
+
+        <tr class="register"
+            style="border-left: 0px!important; border-right: 0px!important; border-top: 0px!important; border-bottom: 1px!important;">
+            <td style="width:45px; border-left: 0px!important; border-right: 0px!important;  ">
+                <a data-href="#" (click)="onRowExpand(rowData, $event)">
+                    <i [ngClass]="rowData.isOpen ? 'pi pi-chevron-circle-down' : 'pi pi-chevron-circle-right'"></i>
+                </a>
+            </td>
+            <td style="border-left: 0px!important;  border-right: none!important;">
+                <div>
+                    <span>{{rowData.name}}</span>
+                </div>
+            </td>
+        </tr>
+        <tr *ngIf="rowData.isOpen" class="register-detail">
+            <td colspan="2">
+                {{rowData.name}}
+            </td>
+        </tr>
+    </ng-template>
+</p-table>
+
+
+<p-table *ngIf="rights" [value]="rights">
+    <ng-template pTemplate="body" let-rowData>
+        <!-- <ng-template [ngIf]=> -->
+
+        <tr *ngIf="rowData && rowData.checkable" class="rights"
+            style="border-left: none!important; border-top: none!important;  border-bottom: 1px!important; border-right: none!important;">
+            <td
+                style="width:45px; border-left: none!important; border-top: none!important;  border-bottom: 1px!important; border-right: none!important;">
+                <a>
+                    <p-checkbox name="groupname" [value]="rowData" [(ngModel)]="rowData.checked" 
+                      [ngClass]="{'approvalgroupview': rowData.name == 'Approval Group - View',
+                 'payments_auditlogview':rowData.id == 'payments_auditlogview',
+                'approvalgroupview':rowData.name == 'Approval Group - View',
+                'approvalprofileview': rowData.name == 'Approval Profile - View',
+                'importfilesview': rowData.name == 'Import Files - View',
+                'importfilesmanageprofile': rowData.name == 'Import Files - Manage Profile',
+                'managesecurereceiver':rowData.name == 'Manage Secure Receiver',
+                'unmanagereceivers': rowData.name == 'Unmanaged Receivers',
+                'wiremanagedreceiversview': rowData.name == 'Wire Managed Receivers - View',
+                'viewpaymentdetails': rowData.name == 'View Payment Details',
+                'viewreport': rowData.name == 'View Report',
+                'payments_approvalgroupview_approve': rowData.id == 'payments_approvalgroupview_approve',
+                'payments_approvalprofileview_delete': rowData.id == 'payments_approvalprofileview_delete',
+                'payments_approvalprofileview_update': rowData.id == 'payments_approvalprofileview_update',
+                'payments_approvalprofileview_create': rowData.id == 'payments_approvalprofileview_create',
+                'payments_importfilesmanageprofile_approve': rowData.id == 'payments_importfilesmanageprofile_approve',
+                'wire_wiremanagedreceiversview_delete': rowData.id == 'wire_wiremanagedreceiversview_delete',
+                'wire_wiremanagedreceiversview_createupdate': rowData.id == 'wire_wiremanagedreceiversview_createupdate',
+                'wire_wiremanagedreceiversview_approve': rowData.id == 'wire_wiremanagedreceiversview_approve',
+                'domesticwire_viewpaymentdetails': rowData.id == 'domesticwire_viewpaymentdetails',
+                'domesticwire_viewpaymentdetails_createupdatepayment': rowData.id == 'domesticwire_viewpaymentdetails_createupdatepayment',
+                'createupdatepayment_paymentfromtemplate': rowData.id == 'createupdatepayment_paymentfromtemplate',
+                'createupdatepayment_freeformtemplate': rowData.id == 'createupdatepayment_freeformtemplate',
+                'createupdatepayment_paymentfromtemplate': rowData.id == 'createupdatepayment_paymentfromtemplate',
+                'domesticwire_viewpaymentdetails_cancelpayment': rowData.id == 'createupdatepayment_paymentfromtemplate',
+                'domesticwire_viewpaymentdetails_approvepayment': rowData.id == 'domesticwire_viewpaymentdetails_approvepayment',
+                'domesticwire_viewpaymentdetails_importpayment': rowData.id == 'domesticwire_viewpaymentdetails_importpayment',
+                'domesticwire_viewtemplatedetails_createtemplate': rowData.id == 'domesticwire_viewtemplatedetails_createtemplate',
+                'domesticwire_viewtemplatedetails_edittemplate': rowData.id == 'domesticwire_viewtemplatedetails_edittemplate',
+                'domesticwire_viewpaymentdetails_importpayment': rowData.id == 'domesticwire_viewpaymentdetails_importpayment',
+                'edittemplate_edittemplatelimit': rowData.id == 'edittemplate_edittemplatelimit'
+            }" binary="true" (click)="_sendDataToParent(data)">
+                    </p-checkbox>
+                </a>
+
+            </td>
+            <td style="width:45px; border: none!important;float:left ">
+                <div>
+                    <span style="white-space:nowrap; margin-left: -20px;"> {{rowData.name}}</span>
+                </div>
+            </td>
+        </tr>
+
+        <tr *ngIf="rowData && rowData.rights && rowData.checkable">
+            <td [ngClass]="'noBorder'" style="border:none!important;">
+            </td>
+            <td style="border:none!important;">
+                <app-rights-and-attributes [rights]="rowData.rights" [registers]="rowData.registers"
+                    (click)="_sendDataToParent(data)" #data>
+                </app-rights-and-attributes>
+            </td>
+        </tr>
+    </ng-template>
+    <!-- </ng-template> -->
+</p-table>

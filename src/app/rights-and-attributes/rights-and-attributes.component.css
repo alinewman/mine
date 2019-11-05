@@ -1,0 +1,52 @@
+/* ::ng-deep .ui-table td tr{
+     border : 10px !important;
+} */
+
+
+/* ::ng-deep body .ui-table .ui-table-tbody > tr > td {
+     background-color: inherit; 
+    border: 0px!important;
+} */
+
+
+::ng-deep .ui-table-tbody > tr:nth-child(odd) {
+    background-color: transparent!important;
+    border-bottom: 1px!important;
+}
+::ng-deep body .ui-widget {
+    margin-left: -1px;
+}
+/* ::ng-deep body .ui-table .ui-table-tbody > tr.rights {
+  background-color: pink;
+   margin-left: -5px;
+} */
+
+
+/* ::ng-deep tr.register{
+    border-top: 10px red;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 1px;
+
+}
+
+.register-detail{
+    border: 1px;
+}
+
+.rights{
+    border-left: 0px;
+} */
+
+::ng-deep .borderless .ui-table  td{
+    border: none!important;
+}
+
+/* ::ng-deep .ui-table * {
+     border : 0px !important;
+} */
+
+::ng-deep   .borderless .ui-table-tbody > tr:nth-child(odd){
+  border:none!important;
+  background-color: pink!important;
+}
