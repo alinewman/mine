@@ -2,8 +2,8 @@
     [(selection)]="selectedRow">
 
     <ng-template pTemplate="header" let-columns>
-        <tr style="cursor: pointer;" >
-            <th width="5%"></th>
+        <tr style="cursor: pointer;">
+
             <th width="50%" class="apply" style="pointer-events: none;">Apply Preset across all {{title}} tiers</th>
             <th width="10%" class="norights">No Rights<br><a id="selectall" style="cursor: pointer;"
                     (click)="setRights2('noRights')">Select All</a>
@@ -15,7 +15,7 @@
                     (click)="setRights('fullRights')">Select
                     All</a></th>
             <th width="7%" (click)="setRights4('customRights')" class="customrights">Custom Rights<br>
-                <div id="hideLink" ></div>
+                <div id="hideLink"></div>
             </th>
             <th width="5%" id="headOne" style="pointer-events: none;"></th>
             <th width="10%" class="grantrights">Grant Rights<br><a id="selectall" style="cursor: pointer;"
@@ -28,16 +28,15 @@
                 'domesticwireservices': rowData.name == 'Domestic Wire Services'}">
             <td class="zero">
                 <a (click)="onRowExpand(rowData.name, $event)" style="margin-left:7px">
-                    <i [ngClass]="rowData.checkable ? 'pi pi-chevron-circle-down' : 'pi pi-chevron-circle-right'"></i>
-                </a>
+                    <i [ngClass]="rowData.checkable ? 'pi pi-chevron-circle-down' : 'pi pi-chevron-circle-right'"
+                        style="float: left"></i>
 
-            </td>
 
-            <td *ngIf="rowGroupMetadata[rowData.name].index  === rowIndex" class="one" style="pointer-events: none;">
-                <div [ngClass]="{'Payments':rowData.name == 'Payments', 'WireServices': rowData.name == 'Wire Services',
+                    <div [ngClass]="{'Payments':rowData.name == 'Payments', 'WireServices': rowData.name == 'Wire Services',
                 'DomesticWireServices': rowData.name == 'Domestic Wire Services'}">
-                    <span>{{rowData.name}}</span>
-                </div>
+                        <span>{{rowData.name}}</span>
+                    </div>
+                </a>
             </td>
             <td style="text-align: center" class="two">
                 <p-radioButton name="groupname" [name]="rowData.id" value="noRights" binary="true"
@@ -71,9 +70,9 @@
             <tr style="cursor: pointer;">
 
                 <td colspan="8" style="padding:0px!important">
-                    <!-- <app-rights-and-attributes (grantEmmiter)="displayGrant($event)" [rights]="rowData.rights"
+                    <app-rights-and-attributes (grantEmmiter)="displayGrant($event)" [rights]="rowData.rights"
                         [registers]="rowData.registers" (sendDataToParent)="eventFromChild($event)">
-                    </app-rights-and-attributes> -->
+                    </app-rights-and-attributes>
                 </td>
             </tr>
         </ng-template>
