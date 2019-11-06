@@ -1,4 +1,4 @@
-<p-table *ngIf="registers" [value]="registers" id="rightsTable">
+<p-table *ngIf="registers" [value]="registers" id="rightsTable" selectionMode=”single” >
 
     <ng-template pTemplate="body" let-rowData let-columns="columns" let-expanded="expanded">
 
@@ -33,8 +33,7 @@
             <td
                 style="width:45px; border-left: none!important; border-top: none!important;  border-bottom: 1px!important; border-right: none!important;">
                 <a>
-                    <p-checkbox name="groupname" [value]="rowData" [(ngModel)]="rowData.checked" 
-                      [ngClass]="{'approvalgroupview': rowData.name == 'Approval Group - View',
+                    <p-checkbox name="groupname" [value]="rowData" [(ngModel)]="rowData.checked" [ngClass]="{'approvalgroupview': rowData.name == 'Approval Group - View',
                  'payments_auditlogview':rowData.id == 'payments_auditlogview',
                 'approvalgroupview':rowData.name == 'Approval Group - View',
                 'approvalprofileview': rowData.name == 'Approval Profile - View',

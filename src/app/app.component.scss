@@ -1,3 +1,127 @@
 ::ng-deep #center{
   margin-left: 40px;
 }
+::ng-deep tr.hideMe:nth-child(even) {
+    display: none!important;
+}
+
+::ng-deep tr.showMe:nth-child(even) {
+    display: none!important;
+}
+
+::ng-deep div.Payments{
+    margin-left: 0px; float: left;
+}
+
+::ng-deep div.WireServices{
+    margin-left: 20px; float: left
+}
+
+::ng-deep div.DomesticWireServices{
+    margin-left: 40px; 
+    float: left;
+}
+
+
+
+ ::ng-deep  .ui-radiobutton {
+     text-align: center;
+     display: inline!important;
+}
+
+ ::ng-deep  body .ui-radiobutton .ui-radiobutton-box {
+    margin: auto;
+    margin-top: -15px!important;
+}
+
+
+ ::ng-deep  body .ui-chkbox .ui-chkbox-box > th.grantrights {
+    margin: auto;
+}
+
+
+
+
+::ng-deep body .ui-table .ui-table-thead > tr > th.apply:hover {
+    background-color: #87CEFA!important;
+}
+
+::ng-deep body .ui-table .ui-table-thead > tr > th.norights:hover {
+    background-color: #87CEFA!important;
+}
+
+::ng-deep body .ui-table .ui-table-thead > tr > th.viewonly:hover{
+    background-color:#87CEFA!important;
+}
+
+::ng-deep body .ui-table .ui-table-thead > tr > th.fullrights:hover {
+    background-color: #87CEFA!important;
+}
+
+::ng-deep body .ui-table .ui-table-thead > tr > th.customrights:hover {
+    background-color:#778899!important;
+}
+
+::ng-deep body .ui-table .ui-table-thead > tr > th.grantrights:hover{
+    background-color:#87CEFA!important;
+}
+
+
+
+
+::ng-deep  body .ui-table .ui-table-tbody > tr > td.payments:hover{
+    background-color: #87CEFA!important;
+
+}
+
+::ng-deep  body .ui-table .ui-table-tbody > tr.wireservices:hover{
+    background-color: #87CEFA!important;
+
+}
+::ng-deep  body .ui-table .ui-table-tbody > tr.domesticwireservices:hover{
+    background-color: #87CEFA!important;
+}
+
+
+::ng-deep  body .ui-table .ui-table-tbody > tr.payments:hover {
+    background-color: #87CEFA!important;
+}
+::ng-deep  body .ui-table .ui-table-tbody > tr > td.zero:hover {
+  background-color: #87CEFA!important;
+}
+::ng-deep  body .ui-table .ui-table-tbody > tr > td.one:hover {
+  background-color: #87CEFA!important;
+}
+::ng-deep  body .ui-table .ui-table-tbody > tr >  td.two:hover {
+  background-color: #87CEFA!important;
+}
+::ng-deep  body .ui-table .ui-table-tbody > tr > td.three:hover {
+  background-color: #87CEFA!important;
+}
+::ng-deep  body .ui-table .ui-table-tbody > tr > td.four:hover {
+  background-color: #87CEFA!important;
+}
+::ng-deep  body .ui-table .ui-table-tbody > tr > td.five:hover {
+  background-color: #778899!important;
+}
+
+::ng-deep  body .ui-table .ui-table-tbody > tr > td.six:hover {
+  background-color: #87CEFA!important;
+}
+
+
+::ng-deep  .ui-state-highlight{
+background-color: green
+}
+
+
+
+
+
+
+
+
+
+
+
+

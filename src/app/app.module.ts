@@ -13,13 +13,12 @@ import { PaymentService } from './services/paymentservice';
 import { CheckboxModule } from 'primeng/checkbox';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { RightsAndAttributesComponent } from './rights-and-attributes/rights-and-attributes.component';
-import { RegistersComponent } from './registers/registers.component';
+
 
 @NgModule({
     declarations: [
         AppComponent,
-        RightsAndAttributesComponent,
-        RegistersComponent
+        RightsAndAttributesComponent
     ],
     imports: [
         BrowserModule,

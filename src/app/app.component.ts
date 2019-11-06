@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy, ChangeDetectorRef, Input, OnInit } from '@angular/core';
-import { Car } from './domain/car';
+
 import { Payment } from './domain/payment';
 import { PaymentService } from './services/paymentservice';
 import { Stuff } from './domain/stuff';
@@ -21,7 +21,7 @@ export type Category = 'Payments' | 'Wire Services' | 'Domestic Wire Services';
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
     providers: [],
-    //encapsulation: ViewEncapsulation.Native // 
+    //encapsulation: ViewEncapsulation.ShadowDom ,
 })
 export class AppComponent implements OnInit {
 
@@ -44,6 +44,9 @@ export class AppComponent implements OnInit {
     title: string;
 
     dataFromChild: any;
+
+    public rowGroupMetadata: any;
+    public selectedName: any;
 
     constructor() { }
 
@@ -394,6 +397,7 @@ export class AppComponent implements OnInit {
                                         "checkable": true
                                     }
                                 ]
+
                             },
                             {
                                 "id": "domesticwire_viewpaymentdetails_importpayment",
@@ -494,13 +498,15 @@ export class AppComponent implements OnInit {
                                 }
                             }
                         }
+
                     }
                 ]
             })
+
         ];
 
 
-
+        this.updateRowGroupMetaData();
 
     }
 
@@ -618,6 +624,40 @@ export class AppComponent implements OnInit {
     eventFromChild(data) {
         this.dataFromChild = data;
         this.setRights4();
+    }
+
+    onRowSelect(event: any, template?: any) {
+        // simply loggin the event, 
+        // u can do something else with the data
+        console.log('vtData : ', event);
+    }
+
+    updateRowGroupMetaData() {
+        this.rowGroupMetadata = {};
+        if (this.payments) {
+            for (let i = 0; i < this.payments.length; i++) {
+                let rowData = this.payments[i];
+                let name = rowData.name;
+                if (i == 0) {
+                    this.rowGroupMetadata[name] = { index: 0, size: 1 };
+                }
+                else {
+                    let previousRowData = this.payments[i - 1];
+                    let previousRowGroup = previousRowData.name;
+                    if (name === previousRowGroup)
+                        this.rowGroupMetadata[name].size++;
+                    else
+                        this.rowGroupMetadata[name] = { index: i, size: 1 };
+                }
+            }
+        }
+    }
+
+
+    selectRow(value) {
+        this.selectedName = value.name;
+        console.log(this.selectedName);
+        console.log(event)
     }
 
 }
