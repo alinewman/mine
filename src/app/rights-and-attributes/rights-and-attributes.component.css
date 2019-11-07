@@ -59,11 +59,35 @@
 
 ::ng-deep .mylabel
 {
-white-space:nowrap;
-float: right;
+     float:left;
+     margin-top: 30px;
 }
 
-/* ::ng-deep .myRadio 
+::ng-deep .myRadio 
 {
+display: block;
+float: left;
+ margin-right: 20px;
+ margin-top: -5px;
+}
 
-} */
+
+::ng-deep body .ui-button.ui-button-text-only .ui-button-text:hover {
+    padding: 0.429em 1em;
+    color:black;
+}
+
+
+
+::ng-deep body .ui-button.ui-button-text-only .ui-button-text:hover {
+    color: black;
+}
+
+::ng-deep .ui-button-text .ui-clickable:focus{
+border: none!important;
+}
+
+::ng-deep body .ui-button.ui-state-default.ui-button-info, body .ui-buttonset.ui-button-info[_ngcontent-ktu-c1] > .ui-button.ui-state-default[_ngcontent-ktu-c1] {
+
+    margin-left: 20px;
+}

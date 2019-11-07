@@ -9,8 +9,8 @@
                     <i [ngClass]="rowData.isOpen ? 'pi pi-chevron-circle-down' : 'pi pi-chevron-circle-right'"></i>
                 </a>
             </td>
-            <td style="border-left: 0px!important;  border-right: none!important;">
-                <div>
+            <td style="border-left: 0px!important;  border-right: none!important;margin-left: 10px;">
+                <div style="float:left;">
                     <span>{{rowData.name}}</span>
                     <div class="ui-toolbar-group-right" *ngIf="rowData.showLimitSet">
                         <p-button label="No limits Set" styleClass="ui-button-info"></p-button>
@@ -63,33 +63,31 @@
                         </div>
                     </div>
                 </div>
-                </div>
+            </div>
             <!-- <td colspan="2">
                 <app-attributes></app-attributes>
             </td> -->
-            <div *ngIf="rowData.showBusinessUnit">
-                <div class="register-assignment">
+            <div *ngIf="rowData.showBusinessUnit" style="height:150px;">
+                <div class="register-assignment" style="margin-top: 30px; margin-left: 50px;">
                     <div>
-                        <div>
+                        <div style="display: block;white-space: nowrap;">Register Assignment comes from:</div>
+
+                        <div style="margin-top: 20px;">
                             <p-radioButton class="myRadio" name="groupname" [name]="rowData.id" value="isBussinessUnit"
-                                binary="true" [(ngModel)]="rowData.isBussinessUnit" >
+                                binary="true" [(ngModel)]="rowData.isBussinessUnit">
                             </p-radioButton>
-                        </div>
-                        <div style="display: block;white-space: nowrap;">
-                            <label  class="myLabel" >
+                            <label class="myLabel" style="display: block;white-space: nowrap; margin-left: 10px;">
                                 Business Units
                             </label>
                         </div>
+
                     </div>
                     <div>
-                        <div>
+                        <div style="margin-top: 40px;">
                             <p-radioButton class="myRadio" name="groupname" [name]="rowData.id"
-                                value="isExplicitAssignment" binary="true" [(ngModel)]="rowData.isExplicitAssignment"
-                               >
+                                value="isExplicitAssignment" binary="true" [(ngModel)]="rowData.isExplicitAssignment">
                             </p-radioButton>
-                        </div>
-                        <div style="display: block; white-space: nowrap;">
-                            <label  class="myLabel" >
+                            <label class="myLabel" style="display: block;white-space: nowrap;">
                                 Explicit Assignment
                             </label>
                         </div>
@@ -97,10 +95,28 @@
 
                 </div>
                 <div class="accounts-associated">
+                    <!-- <table id="customers" style="float: right;">
+                        <tr >
+                            <th style="white-space: nowrap; background-color: transparent;">Company</th>
+                            <th style="white-space: nowrap; background-color: transparent;">Contact</th>
+                            <th style="white-space: nowrap; background-color: transparent;">Country</th>
+                        </tr>
+                        <tr>
+                            <td>Alfreds Futterkiste</td>
+                            <td>Maria Anders</td>
+                            <td>Germany</td>
+                        </tr>
+                        <tr>
+                            <td>Berglunds snabbköp</td>
+                            <td>Christina Berglund</td>
+                            <td>Sweden</td>
+                        </tr>
+
+                    </table> -->
 
                 </div>
             </div>
-       
+
         </tr>
     </ng-template>
 </p-table>
