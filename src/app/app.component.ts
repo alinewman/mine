@@ -68,8 +68,9 @@ export class AppComponent implements OnInit {
                     [
                         {
                             "name": "Manage Security Levels for Payments",
-                            "isOpen": false
-
+                            "isOpen": false,
+                            "showBusinessUnit": true,
+                            "showLimitSet": false
                         }
                     ],
                 "rights": [
@@ -296,11 +297,21 @@ export class AppComponent implements OnInit {
                 "grantRight": false,
                 "checkable": true,
                 "registers": [
-                    { "name": "Manage Attributes for Wire Services", "isOpen": false },
-                    { "name": "Manage Domestic Bank Accounts - Commercial for Wire Services", "isOpen": false },
-                    { "name": "Manage Security Levels for Wire Services", "isOpen": false },
-                    { "name": "Manage Domestic Bank Accounts - Commercial (Savings) for Wire Services", "isOpen": false },
-                    { "name": "Manage Global Treasury Management Accounts for Wire Services", "isOpen": false }
+                    {
+                        "name": "Manage Attributes for Wire Services", "isOpen": false, "showBusinessUnit": false,
+                        "showLimitSet": false},
+                    {
+                        "name": "Manage Domestic Bank Accounts - Commercial for Wire Services", "isOpen": false, "showBusinessUnit": false,
+                        "showLimitSet": false },
+                    {
+                        "name": "Manage Security Levels for Wire Services", "isOpen": false, "showBusinessUnit": false,
+                        "showLimitSet": false},
+                    {
+                        "name": "Manage Domestic Bank Accounts - Commercial (Savings) for Wire Services", "isOpen": false, "showBusinessUnit": false,
+                        "showLimitSet": false },
+                    {
+                        "name": "Manage Global Treasury Management Accounts for Wire Services", "isOpen": false, "showBusinessUnit": false,
+                        "showLimitSet": false }
                 ],
                 "rights": [
                     {
@@ -347,9 +358,15 @@ export class AppComponent implements OnInit {
                 "grantRight": false,
                 "checkable": true,
                 "registers": [
-                    { "name": "Manage Domestic Bank Accounts - Commercial for Domestic Wire", "isOpen": false },
-                    { "name": "Manage Security Levels for Domestic Wire", "isOpen": false },
-                    { "name": "Manage Domestic Bank Accounts - Commercial (Savings) for Domestic Wire", "isOpen": false }
+                    {
+                        "name": "Manage Domestic Bank Accounts - Commercial for Domestic Wire", "isOpen": false, "showBusinessUnit": true,
+                        "showLimitSet": false },
+                    {
+                        "name": "Manage Security Levels for Domestic Wire", "isOpen": false, "showBusinessUnit": false,
+                        "showLimitSet": false },
+                    {
+                        "name": "Manage Domestic Bank Accounts - Commercial (Savings) for Domestic Wire", "isOpen": false, "showBusinessUnit": false,
+                        "showLimitSet": false }
                 ],
                 "rights": [
                     {
@@ -381,7 +398,9 @@ export class AppComponent implements OnInit {
                                     }
                                 },
                                 "registers": [
-                                    { "name": "Manage Attributes for Create/Update Payment", "isOpen": false }
+                                    {
+                                        "name": "Manage Attributes for Create/Update Payment", "isOpen": false, "showBusinessUnit": false,
+                                        "showLimitSet": true }
                                 ],
                                 "rights": [
                                     {
@@ -411,7 +430,9 @@ export class AppComponent implements OnInit {
                                 "checked": false,
                                 "checkable": true,
                                 "registers": [
-                                    { "name": "Manage Attributes for Approve Payment", "isOpen": false }
+                                    {
+                                        "name": "Manage Attributes for Approve Payment", "isOpen": false, "showBusinessUnit": false,
+                                        "showLimitSet": false }
                                 ]
                             },
                             {

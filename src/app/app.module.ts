@@ -13,12 +13,15 @@ import { PaymentService } from './services/paymentservice';
 import { CheckboxModule } from 'primeng/checkbox';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { RightsAndAttributesComponent } from './rights-and-attributes/rights-and-attributes.component';
-
+import { AttributesComponent } from './attributes/attributes.component';
+import { ToolbarModule } from 'primeng/toolbar';
+import { FieldsetModule } from 'primeng/fieldset';
 
 @NgModule({
     declarations: [
         AppComponent,
-        RightsAndAttributesComponent
+        RightsAndAttributesComponent,
+        AttributesComponent
     ],
     imports: [
         BrowserModule,
@@ -31,7 +34,9 @@ import { RightsAndAttributesComponent } from './rights-and-attributes/rights-and
         ButtonModule,
         DropdownModule,
         CheckboxModule,
-        RadioButtonModule
+        RadioButtonModule,
+        ToolbarModule,
+        FieldsetModule
     ],
     providers: [PaymentService],
     bootstrap: [AppComponent]

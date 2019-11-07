@@ -16,37 +16,54 @@
 ::ng-deep body .ui-widget {
     margin-left: -1px;
 }
-/* ::ng-deep body .ui-table .ui-table-tbody > tr.rights {
-  background-color: pink;
-   margin-left: -5px;
-} */
 
 
-/* ::ng-deep tr.register{
-    border-top: 10px red;
-    border-left: 0px;
-    border-right: 0px;
-    border-bottom: 1px;
-
-}
-
-.register-detail{
-    border: 1px;
-}
-
-.rights{
-    border-left: 0px;
-} */
 
 ::ng-deep .borderless .ui-table  td{
     border: none!important;
 }
 
-/* ::ng-deep .ui-table * {
-     border : 0px !important;
-} */
 
-::ng-deep   .borderless .ui-table-tbody > tr:nth-child(odd){
-  border:none!important;
-  background-color: pink!important;
+
+
+::ng-deep  body .ui-button.ui-state-default.ui-button-info, body .ui-buttonset.ui-button-info > .ui-button.ui-state-default {
+    color: black;
+    background-color: transparent!important;
+    border: 1px solid grey;
 }
+
+
+
+.register-detail2 {
+	margin: 0 auto;
+	display: -webkit-flex; /* Safari */		
+	display: flex; /* Standard syntax */
+}
+
+
+.register-detail2  .column{
+	-webkit-flex: 1; /* Safari */
+	-ms-flex: 1; /* IE 10 */
+	flex: 1; /* Standard syntax */
+}
+
+::ng-deep  .ui-inputgroup .ui-inputtext
+{
+      display:block;
+}
+::ng-deep  .ui-inputgroup
+{
+      display:block;
+}
+
+
+::ng-deep .mylabel
+{
+white-space:nowrap;
+float: right;
+}
+
+/* ::ng-deep .myRadio 
+{
+
+} */

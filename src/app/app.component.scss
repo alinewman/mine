@@ -114,8 +114,18 @@
 background-color: green
 }
 
+::ng-deep  .ui-inputgroup .ui-inputtext
+{
+      display:block;
+}
+::ng-deep  .ui-inputgroup
+{
+      display:block;
+}
 
-
+.big {
+    cursor:pointer;
+}
 
 
 

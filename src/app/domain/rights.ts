@@ -8,4 +8,6 @@ export interface Rights {
   checked?: boolean;
   childObj?: any;
   isOpen?: boolean;
+  showLimitSet: any;
+  showBusinessUnit: any;
 }

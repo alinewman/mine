@@ -28,6 +28,23 @@ export class Stuff {
     get isOpen() {
         return this._data.isOpen;
     }
+
+    set showLimitSet(value) {
+        this._data.showLimitSet = value;
+    }
+
+    get showLimitSet() {
+        return this._data.showLimitSet;
+    }
+
+    set showBusinessUnit(value) {
+        this._data.showBusinessUnit = value;
+    }
+
+    get showBusinessUnit() {
+        return this._data.showBusinessUnit;
+    }
+    
     get treeId() {
         return this._data.treeId;
     }

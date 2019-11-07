@@ -45,7 +45,7 @@ export class RightsAndAttributesComponent implements OnInit {
     const rows: any[] = parent || (this.registersTable as any).value;
     if (parent) {
       console.log(parent)
-      parent.isOpen = !parent.isOpen;
+      parent.isOpen = !parent.isOpen ;
     }
 
   }
